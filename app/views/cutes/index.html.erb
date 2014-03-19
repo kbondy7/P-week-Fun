@@ -1,0 +1,48 @@
+
+<div class="container">
+  <div align="center">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+  <meta charset="utf-8">
+<text-align:center>
+<div class="jumbotron">
+  <% @cutes.each do |cute| %>
+  <h1>Baby Animals</h1>
+  <p>IZZ SO FLUFFFY</p>
+  <p><a href="http://kieran-91949.use1-2.nitrousbox.com/cutes/new" class="btn btn-primary btn-lg" role="button">create new animal</a></p>
+ 
+  </div>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><td><h2><%= cute.Animal %></h2></td></div>
+  <div class="panel-body">
+    
+  
+
+
+
+
+
+  <tbody>
+   
+      <tr>
+        
+        <td><img src="<%= cute.image_url %>"></td>
+        
+      <p>  
+        <td><%= link_to 'Show |', cute %></td>
+        <td><%= link_to 'Edit |', edit_cute_path(cute) %></td>
+        <td><%= link_to 'Destroy', cute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    </p>
+    <% end %>
+  </tbody>
+
+<br>
+    </div>
+    </div>
+
+
+<%= link_to 'New Animal', new_cute_path %>
+  </div>

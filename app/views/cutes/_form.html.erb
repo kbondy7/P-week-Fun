@@ -1,0 +1,33 @@
+<%= form_for(@cute) do |f| %>
+  <% if @cute.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cute.errors.count, "error") %> prohibited this cute from being saved:</h2>
+
+      <ul>
+      <% @cute.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Animal %><br>
+    <%= f.text_field :Animal %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :level_of_cuteness %><br>
+    <%= f.number_field :level_of_cuteness %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @cute.Animal %>
+</p>
+
+<p>
+  <strong><img src="<%= @cute.image_url%>"></strong>
+
+</p>
+
+<p>
+  <h1><strong>Description:</strong></h1>
+  <h3><%= @cute.description %><h3>
+</p>
+
+<p>
+  <h1> <strong>Level of cuteness:</strong></h1>
+    <h3> <%= @cute.level_of_cuteness %></h3>
+</p>
+
+<%= link_to 'Edit', edit_cute_path(@cute) %> |
+<%= link_to 'Back', cutes_path %>

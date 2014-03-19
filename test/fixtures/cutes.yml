@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Animal: MyString
+  image_url: MyString
+  description: MyText
+  level_of_cuteness: 1
+
+two:
+  Animal: MyString
+  image_url: MyString
+  description: MyText
+  level_of_cuteness: 1
